@@ -12,17 +12,18 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
+    wrapper = require('gulp-wrapper'),
     livereload = require('gulp-livereload');
 
 // 样式
 gulp.task('styles', function() {
     return gulp.src('./resources/assets/css/main.scss')
-        .pipe(sass())
+        .pipe(wrapper(sass('./resources/assets/css/main.scss',{style:"expanded"})))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(gulp.dest('./public/dist/styles'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(minifycss())
-        .pipe(gulp.dest('../public/dist/styles'))
+        .pipe(gulp.dest('./public/dist/styles'))
         .pipe(notify({ message: 'Styles task complete' }));
 });
 /*

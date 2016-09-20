@@ -6,8 +6,15 @@
     <script type="text/javascript" src="/dist/scripts/jquery.min.js"></script>
 </head>
 <body id="index">
-<div class="header">
- this is header!
+<div id="header">
+  <div class="page-container" id="nav">
+    <div class="logo" id="logo">
+      <a href="/" target="_self" class="hide-text">慕课网</a>
+    </div>
+    <ul class="nav-item">
+
+    </ul>
+  </div>
 </div>
 <div class="container">
   @yield('content')

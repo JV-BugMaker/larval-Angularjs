@@ -50,18 +50,44 @@ $bg_white:white;
 $bg_black:black;
 $min-width:1200px;
 $font:14px/1.5 "PingFang SC", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
-
+@mixin link-a {
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
 body{
   background-color:$bg_white;
   height:100%;
   width: 100px;
   min-width: $min-width;
   font: $font;
-  color: $bg_black;
+  color: $bg_white;
 }
 #header {
   padding-top: 10px;
   height:70px;
   width: 100%;
-  background-color: $bg_black;
+  color: $bg_black;
+}
+#nav {
+  padding:0 15px;
+  width: auto;
+  height: 60px;
+  margin:0 auto;
+  position: relative;
+  z-index: 1000;
+}
+#logo{
+  float: left;
+  margin:0 20px;
+  margin-left: 0;
+  background-size: cover;
+}
+#logo a {
+  @include link-a;
+  height: 60px;
+  width: 140px;
+  background: url('../images/imooc_img/logo.png') no-repeat center center;
+  background-size: 100%;
 }

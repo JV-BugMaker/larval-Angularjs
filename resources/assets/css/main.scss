@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,4 +44,24 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+/*开始写sass样式**/
+$bg_white:white;
+$bg_black:black;
+$min-width:1200px;
+$font:14px/1.5 "PingFang SC", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
+
+body{
+  background-color:$bg_white;
+  height:100%;
+  width: 100px;
+  min-width: $min-width;
+  font: $font;
+  color: $bg_black;
+}
+#header {
+  padding-top: 10px;
+  height:70px;
+  width: 100%;
+  background-color: $bg_black;
 }

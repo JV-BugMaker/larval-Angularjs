@@ -1,7 +1,7 @@
 var elixir = require('laravel-elixir');
 //在项目根目录引入gulp和uglify插件
 var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
     jshint = require('gulp-jshint'),
@@ -18,10 +18,9 @@ var gulp = require('gulp'),
 // 样式
 gulp.task('styles', function() {
     return gulp.src('./resources/assets/css/main.scss')
-        .pipe(wrapper(sass('./resources/assets/css/main.scss',{style:"expanded"})))
+        .pipe(sass())
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-        .pipe(gulp.dest('./public/dist/styles'))
-        .pipe(rename({ suffix: '.min' }))
+        .pipe(rename({ suffix: '.min',extname:'.css'}))
         .pipe(minifycss())
         .pipe(gulp.dest('./public/dist/styles'))
         .pipe(notify({ message: 'Styles task complete' }));

@@ -15,7 +15,9 @@
       <li class="set-btn visible-xs-block">
           <a href="/" target="_self"></a>
       </li>
-
+        @foreach($pageconfig as $key=>$config)
+            <li>{{$config->page}}</li>
+        @endforeach
     </ul>
   </div>
 </div>

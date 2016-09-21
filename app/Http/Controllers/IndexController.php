@@ -12,8 +12,6 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $page = Pageconfig::getAll();
-
-        return view('index.index',$page);
+        return view('index.index');
     }
 }

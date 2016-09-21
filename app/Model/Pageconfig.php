@@ -16,14 +16,6 @@ class Pageconfig extends Model
     {
         $data = Pageconfig::all();
         //数据对象
-        //排序
-        usort($data,function($a,$b){
-            if($a['sort']>$b['sort']){
-                return 1;
-            }else{
-                return -1;
-            }
-        });
         return $data;
     }
 

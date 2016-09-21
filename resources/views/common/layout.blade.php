@@ -12,6 +12,9 @@
       <a href="/" target="_self" class="hide-text">慕课网</a>
     </div>
     <ul class="nav-item">
+      <li class="set-btn visible-xs-block">
+          <a href="/" target="_self"></a>
+      </li>
 
     </ul>
   </div>

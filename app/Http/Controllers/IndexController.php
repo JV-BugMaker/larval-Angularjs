@@ -7,10 +7,13 @@
  */
 namespace App\Http\Controllers;
 
+use App\Model\Pageconfig;
 class IndexController extends Controller
 {
     public function index()
     {
-        return view('index.index');
+        $page = Pageconfig::getAll();
+
+        return view('index.index',$page);
     }
 }

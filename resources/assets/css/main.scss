@@ -52,9 +52,14 @@ $min-width:1200px;
 $font:14px/1.5 "PingFang SC", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
 @mixin link-a {
   display: block;
-  text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
+  text-decoration: none;
+}
+@mixin cf{
+  zoom: 1;
+  &:before, &:after { content: ""; display: table; }
+  &:after { clear: both; }
 }
 body{
   background-color:$bg_white;
@@ -77,6 +82,7 @@ body{
   margin:0 auto;
   position: relative;
   z-index: 1000;
+  @include cf;
 }
 #logo{
   float: left;
@@ -88,6 +94,34 @@ body{
   @include link-a;
   height: 60px;
   width: 140px;
+  text-indent: 100%;  //段落缩进
   background: url('../images/imooc_img/logo.png') no-repeat center center;
   background-size: 100%;
 }
+.nav-item {
+  float: left;
+   height:60px;
+   width: auto;
+   list-style: none;
+  @include cf;
+}
+.nav-item li {
+  height:100%;
+  width: 72px;
+  float: left;
+}
+.nav-item li a {
+  @include link-a;
+  text-align: center;
+  line-height: 60px;
+  width: 100%;
+  height: 100%;
+  color:black;
+  font-size: 16px;
+  &:hover{
+      color:red;
+  }
+}
+
+
+

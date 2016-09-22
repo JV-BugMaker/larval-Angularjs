@@ -12,13 +12,24 @@
       <a href="/" target="_self" class="hide-text">慕课网</a>
     </div>
     <ul class="nav-item">
-      <li class="set-btn visible-xs-block">
-          <a href="/" target="_self"></a>
-      </li>
         @foreach($pageconfig as $key=>$config)
-            <li>{{$config->page}}</li>
+            <li><a href="{{$config->link}}">{{$config->page}}</a></li>
         @endforeach
     </ul>
+    <div class="log-area">
+        <ul class="login">
+            <li>
+                <a href="remind_wrap"></a>
+                
+            </li>
+            <li>
+                <a href="my_message"></a>
+            </li>
+            <li>
+                <a href="user_center"></a>
+            </li>
+        </ul>
+    </div>
   </div>
 </div>
 <div class="container">

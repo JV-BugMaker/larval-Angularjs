@@ -122,6 +122,76 @@ body{
       color:red;
   }
 }
+.log-area{
+  float: right;
+  height: 100%;
+  width: auto;
+}
+.login {
+
+  @include cf;
+}
+.login > li {
+    float:left ;
+    position: relative;
+
+}
+.login > li a {
+    @include link-a;
+    height: 60px;
+    width: 50px;
+    line-height: 60px;
+    color: #787d82;
+    &:link,&:visited{
+      color: #14191e;
+    }
+}
+.login > li > a > i {
+    line-height: 60px;
+    color:#787d82;
+    font-size: 22px;
+}
+.remind_warp {
+  width: 60px;
+  height:60px;
+}
+.remind_warp .msg_icon{
+  right:5px;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: red;
+  display: none;
+  top:14px;
+  border-radius: 50%;
+}
+.remind_warp .icon-notifi {
+    display: block;
+    line-height: 60px;
+    font-size: 22px;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.2s;
+  &:before {
+    content: "\e909";
+  }
+}
+.remind_warp .icon-notifi:hover {
+  color: #fff!important;
+  background-color: #363c41;
+}
+[class^="icon-"],[class*=" icon-"]{
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 
 
 

@@ -56,3 +56,7 @@ $response = $kernel->handle(
 $response->send();
 
 $kernel->terminate($request, $response);
+/*
+ * 入口文件 index.php
+ * 主要实现服务容器的实例化和基本注册 包括服务容器本身注册、基础服务器提供者注册、核心类别名注册和基本路径注册
+ * */
